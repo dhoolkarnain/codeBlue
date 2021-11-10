@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Bahianita&display=swap" rel="stylesheet">
+    <title>codeBlue.com</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Bahianita', cursive;
+    }
+
+    #body {
+        /* border: 2px solid black; */
+        height: 1500px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #navigation {
+        /* border: 2px solid black; */
+        position: sticky;
+        top: 0px;
+        background-color: rgb(235, 228, 188);
+
+    }
+
+    .navigation-part {
+        /* border: 2px solid black; */
+
+    }
+
+    #navigation-upper {
+        /* border: 2px solid black; */
+        display: flex;
+        height: 70px;
+    }
+
+    #navigation-upper-left {
+        /* border: 2px solid black; */
+        width: 100%;
+        display: flex;
+        margin-right: 7px;
+    }
+
+    #navigation-upper-right {
+        display: flex;
+        width: 100%;
+        /* border: 2px solid black; */
+        margin-left: 7px;
+    }
+
+    .logo {
+        color: rgb(7, 7, 156);
+        padding-left: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 20%;
+    }
+
+    #menu-bar-1 {
+        /* border: 2px solid black; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
+
+    #menu-bar-2 {
+        display: none;
+    }
+
+    .menu-section {
+        /* border: 2px solid black; */
+        padding-left: 5px;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+    }
+
+    .tools {
+        margin-left: 15%;
+        width: 50%;
+        /* border: 2px solid black; */
+        display: flex;
+    }
+
+    .tools div a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .button-section {
+        width: 100%;
+        /* border: 2px solid black; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .menu-section {
+        /* border: 2px solid black; */
+        width: 100%;
+        /* font-size: 12px; */
+    }
+
+    .toggle {
+        width: 100%;
+        /* border: 2px solid black; */
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        color: white;
+
+    }
+
+    .translate {
+
+        width: 100%;
+        /* border: 2px solid black; */
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        color: white;
+        /* background-color: rgb(7, 7, 156); */
+    }
+
+    .search {
+        /* border: 2px solid black; */
+        width: 100%;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        color: white;
+        /* background-color: rgb(7, 7, 156); */
+    }
+
+    .website {
+        /* border: 2px solid black; */
+        width: 100%;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        color: rgb(7, 7, 156);
+        /* margin-: 3px; */
+        padding: 4%;
+        margin: 12% 3px 12% 3px;
+        /* margin-right: 3px; */
+        /* background-color: rgb(7, 7, 156); */
+
+    }
+
+    .paid-course {
+        /* border: 2px solid black; */
+        padding: 4%;
+        width: 100%;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        /* color: white; */
+        /* margin: 15px; */
+        margin: 12% 3px 12% 3px;
+        /* margin-left: 3px; */
+        /* margin-right: 3px; */
+        /* padding: 5px; */
+        background-color: rgb(245, 169, 125);
+
+    }
+
+    .log-in {
+        /* border: 2px solid black; */
+        margin: 12% 10px 12% 10px;
+        padding: 4%;
+        width: 100%;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        color: white;
+        background-color: rgb(7, 7, 156);
+    }
+
+    /* home wala part */
+    #home {
+        height: 1500px;
+        /* border: 2px solid red; */
+        background-color: rgb(246, 245, 241);
+    }
+
+    #home-upper {
+        /* border: 2px solid black; */
+        height: 55%;
+        display: flex;
+        /* flex-wrap: wrap-reverse; */
+        flex-direction: column;
+    }
+
+    #home-upper-left {
+        background-color: white;
+        /* border: 2px solid black; */
+        width: 100%;
+        height: 25%;
+    }
+
+    #home-upper-right {
+        /* border: 2px solid black; */
+        /* margin: 12px; */
+        width: 100%;
+        /* border-radius: 9px; */
+        /* height: 60%; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home-upper-right-section {
+        background-color: white;
+        /* border: 2px solid black; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        margin: 12px;
+        border-radius: 12px;
+        padding: 15px;
+    }
+
+    .home-upper-right-section label {
+        color: grey;
+    }
+
+    .home-upper-right-section h1 {
+        font-size: 30px;
+    }
+
+    .home-upper-right-section button {
+        border-radius: 10px;
+        margin-top: 10px;
+        border: none;
+        color: white;
+        font-family: 'Bahianita', cursive;
+        padding: 12px;
+        background-color: rgb(18, 18, 158);
+    }
+
+    #home-middle {
+        height: 25%;
+        /* border: 2px solid yellow; */
+    }
+
+    #home-lower {
+        height: 25%;
+        /* border: 2px solid blue; */
+    }
+
+    /* footer wala part */
+    #footer {
+        background-color: rgb(8, 8, 48);
+    }
+
+    .foot {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        margin-bottom: 65px;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
+    #site-link {
+        margin-top: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        color: white;
+    }
+
+    .site-link-upper {
+        width: 100%;
+    }
+
+    .site-link-lower {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .site-link-left {
+        width: 100%;
+        height: 100%;
+    }
+
+    .site-link-left li {
+        list-style: none;
+    }
+
+    .site-link-left li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .site-link-middle {
+        height: 100%;
+        width: 100%;
+    }
+
+    .site-link-middle li {
+        list-style: none;
+    }
+
+    .site-link-middle li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .site-link-right {
+        height: 100%;
+        width: 100%;
+    }
+
+    .site-link-right li {
+        list-style: none;
+    }
+
+    .site-link-right li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    #social {
+        width: 100%;
+        display: flex;
+        margin-top: 10px;
+        align-items: center;
+        color: white;
+    }
+
+    .social-logo {
+        width: 100%;
+        height: 100%;
+    }
+
+    .social-media {
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+
+    .social-notification {
+        width: 100%;
+    }
+
+
+    .social-media p {
+        font-size: 10px;
+        padding-right: 6px;
+    }
+
+    .social-media a {
+        font-size: 10px;
+        color: white;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin-right: 12px;
+    }
+
+    #privacy {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        color: white;
+    }
+
+    @media only screen and (max-width:500px) {
+        #menu-bar-1 {
+            display: none;
+        }
+
+        #menu-bar-2 {
+            /* border: 2px solid black; */
+            display: flex;
+            /* justify-content: center; */
+            /* align-items: center; */
+            height: 40px;
+            width: 100%;
+            position: fixed;
+            bottom: 0px;
+            background-color: rgb(6, 6, 95);
+        }
+
+        .menu-section {
+            /* border: 2px solid black; */
+            padding-left: 0px;
+            margin-left: 18px;
+            margin-right: 18px;
+            border-radius: 34px;
+            /* font-size: 18px; */
+
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .website {
+            display: none;
+
+        }
+
+        .paid-course {
+            display: none;
+
+        }
+
+        .toggle {
+            display: none;
+        }
+
+        .translate {
+
+            display: none;
+        }
+
+        #home-upper-right {
+
+            display: flex;
+            flex-direction: column;
+        }
+
+
+
+    }
+</style>
+
+<body>
+    <main id="body">
+        <section id="navigation">
+            <section class="navigation-part" id="navigation-upper">
+                <section id="navigation-upper-left" class="navigation-upper-part">
+                    <div class="logo">codeBlue</div>
+                    <div class="menu-bar" id="menu-bar-1">
+                        <div class="menu-section" id="tutorials">Tutorials</div>
+                        <div class="menu-section" id="references">References</div>
+                        <div class="menu-section" id="exercises">exercises</div>
+                        <div class="menu-section" id="videos">Videos</div>
+                    </div>
+                    <div class="menu-bar" id="menu-bar-2">
+                        <div class="menu-section fas fa-university" id="tutorials"></div>
+                        <div class="menu-section fas fa-book" id="tutorials"></div>
+                        <div class="menu-section fas fa-home" id="home"></div>
+                        <div class="menu-section fas fa-video" id="exercises"></div>
+                        <div class="menu-section fas fa-user" id="videos"></div>
+                    </div>
+                </section>
+                <section id="navigation-upper-right" class="navigation-upper-part">
+                    <div class="tools">
+                        <div class="toggle"><a href="" class="fas fa-adjust"></a></div>
+                        <div class="translate"><a href="" class="fas fa-globe-americas"></a></div>
+                        <div class="search"><a href="" class="fas fa-search"></a></div>
+                    </div>
+                    <div class="button-section">
+                        <div class="website">website</div>
+                        <div class="paid-course">Paid Courses</div>
+                        <div class="log-in">Log In</div>
+                    </div>
+                </section>
+            </section>
+            <section class="navigation-part" id="navigation-lower">
+
+            </section>
+        </section>
+        <section id="home">
+            <section id="home-upper">
+                <div id="home-upper-left">
+
+                </div>
+                <div id="home-upper-right">
+                    <div class="home-upper-right-section">
+                        <label for="">Prepare for</label>
+                        <h1>Class 6 to 10</h1>
+                        <label for="">Popular Goals</label>
+                        <div>
+                            <a href="">English Literature</a>
+                            <a href="">Social Studies</a>
+                            <a href="">Science</a>
+                        </div>
+                        <button>Start Learning</button>
+                    </div>
+                    <div class="home-upper-right-section">
+                        <label for="">Prepare for</label>
+                        <h1>Class 11 to 12</h1>
+                        <label for="">Popular Goals</label>
+                        <div>
+                            <a href="">Commerce</a>
+                            <a href="">Arts</a>
+                            <a href="">Science</a>
+                        </div>
+                        <button>Start Learning</button>
+                    </div>
+                </div>
+            </section>
+            <section id="home-middle">
+
+            </section>
+            <section id="home-lower">
+
+            </section>
+        </section>
+        <footer id="footer">
+            <div class="foot">
+                <div id="site-link">
+                    <div class="site-link-upper">
+                        <p>codeBlue</p>
+                    </div>
+                    <div class="site-link-lower">
+                        <div class="site-link-left">
+                            <li><a href="">Contact Us</a></li>
+                            <li><a href="">About Us</a></li>
+                            <li><a href="">Locations</a></li>
+                            <li><a href="">Blog</a></li>
+                        </div>
+                        <div class="site-link-middle">
+                            <li><a href="">Policy Policy</a></li>
+                            <li><a href="">Cookie Policy</a></li>
+                            <li><a href="">Terms & Condition</a></li>
+                            <li><a href="">FAQs</a></li>
+
+                        </div>
+                        <div class="site-link-right">
+                            <li><a href="">Careers</a></li>
+                            <li><a href="">Village</a></li>
+                            <li><a href="">Responsible</a></li>
+                            <li><a href="">Media</a></li>
+                        </div>
+                    </div>
+                </div>
+                <div id="social">
+                    <div class="social-logo">
+                        <p>codeBlue</p>
+                    </div>
+                    <div class="social-media">
+                        <p for="">Follow</p>
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-youtube"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                    </div>
+                    <div class="social-notification">
+
+                    </div>
+                </div>
+                <div id="privacy">
+                    <p>Copyright &copy 2021 codeBlue</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>
