@@ -208,38 +208,82 @@
         flex-direction: column;
         height: 2000px;
         background-color: rgb(228, 227, 224);
+        /* border: 2px solid rebeccapurple; */
     }
 
     #home-upper {
-        height: 28%;
+        height: auto;
         display: flex;
         flex-direction: column;
+        /* border: 2px solid red; */
+        height: 100%;
     }
 
     #home-upper-left {
         background: url("media/image/front3.jpg");
-        background-size: cover;
+        background-size: 100%;
         background-repeat: no-repeat;
         width: 100%;
-        height: 38%;
+        /* border: 2px solid rgb(6, 6, 250); */
+        background-color: rgb(235, 228, 188);
+        /* height: 0; */
+        height: 100%;
+        display: flex;
+        justify-content: right;
+        align-items: center;
     }
 
+    #home-screen-greeting {
+        /* border: 2px solid black; */
+        width: 50%;
+        height: 97%;
+        /* padding: 5px; */
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #home-screen-greeting h1 {
+        font-size: 22px;
+        color: rgb(11, 11, 156);
+        text-shadow: black;
+    }
+
+    #home-screen-greeting p {
+        color: #F6AA92;
+        font-size: 12px;
+    }
+
+    #home-screen-greeting button {
+        background-color: rgb(14, 14, 153);
+        color: white;
+        width: 50%;
+        border: none;
+        height: 35px;
+        font-size: 12px;
+        border-radius: 10px;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+
     #home-upper-right {
+        height: 20%;
         width: 100%;
+        /* border: 2px solid rgb(55, 55, 136); */
         display: flex;
         justify-content: center;
+        background-color: rgb(235, 228, 188);
         align-items: center;
         /* border: 2px solid red; */
     }
 
     .home-upper-right-section {
         background-color: white;
-        /* border: 2px solid rgb(6, 6, 250); */
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 80%;
+        /* height: 80%; */
         width: 80%;
         margin: 12px;
         border-radius: 12px;
@@ -248,6 +292,7 @@
     }
 
     .home-upper-right-section label {
+
         /* border: 2px solid yellow; */
         color: grey;
         font-size: 12px;
@@ -274,7 +319,7 @@
     }
 
     .home-upper-right-section button {
-        border: 2px solid violet;
+        /* border: 2px solid violet; */
         border-radius: 10px;
         width: 40%;
         font-size: 8px;
@@ -287,6 +332,8 @@
     }
 
     #home-middle {
+        /* border: 2px solid blue; */
+        height: 100%;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -310,7 +357,11 @@
     }
 
     #home-lower {
-        height: 27.5%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
         /* border: 2px solid blue; */
     }
 
@@ -534,20 +585,12 @@
         }
 
         #home-upper-left {
-            background: url("media/image/front3.jpg");
+            /* background: url("media/image/front3.jpg"); */
             background-size: 130%;
             background-repeat: no-repeat;
             width: 100%;
-            height: 38%;
-        }
-
-        /* #home-upper-left {
-            background: url("media/image/front3.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            width: 100%;
             height: 56%;
-        } */
+        }
 
         #home-upper-right {
             width: 100%;
@@ -694,34 +737,41 @@
         <section id="home">
             <section id="home-upper">
                 <div id="home-upper-left">
-
+                    <div id="home-screen-greeting">
+                        <h1>We Make Leaders...</h1>
+                        <p>Let you become superheroes of your own domains.</p>
+                        <button>Apply</button>
+                    </div>
                 </div>
                 <div id="home-upper-right">
-                    <div class="home-upper-right-section">
-                        <label for="">Prepare for</label>
-                        <h1>Class 6 to 10</h1>
-                        <label for="">Popular Goals</label>
-                        <div>
-                            <a href="">English Literature</a>
-                            <a href="">Social Studies</a>
-                            <a href="">Science</a>
-                        </div>
-                        <button>Start Learning</button>
-                    </div>
-                    <div class="home-upper-right-section">
-                        <label for="">Prepare for</label>
-                        <h1>Class 11 to 12</h1>
-                        <label for="">Popular Goals</label>
-                        <div>
-                            <a href="">Commerce</a>
-                            <a href="">Arts</a>
-                            <a href="">Science</a>
-                        </div>
-                        <button>Start Learning</button>
-                    </div>
+
                 </div>
             </section>
             <section id="home-middle">
+                <div class="home-upper-right-section">
+                    <label for="">Prepare for</label>
+                    <h1>Class 6 to 10</h1>
+                    <label for="">Popular Goals</label>
+                    <div>
+                        <a href="">English Literature</a>
+                        <a href="">Social Studies</a>
+                        <a href="">Science</a>
+                    </div>
+                    <button>Start Learning</button>
+                </div>
+                <div class="home-upper-right-section">
+                    <label for="">Prepare for</label>
+                    <h1>Class 11 to 12</h1>
+                    <label for="">Popular Goals</label>
+                    <div>
+                        <a href="">Commerce</a>
+                        <a href="">Arts</a>
+                        <a href="">Science</a>
+                    </div>
+                    <button>Start Learning</button>
+                </div>
+            </section>
+            <section id="home-lower">
                 <a class="home-middle-exam" href="htmlFile/Tutorial.html">
                     <p>Classes</p>
                     <h1>12 <span>+</span></h1>
@@ -742,9 +792,6 @@
                     <p>Number Of Students</p>
                     <h1>650 <span>+</span></h1>
                 </div>
-            </section>
-            <section id="home-lower">
-
             </section>
         </section>
         <footer id="footer">
