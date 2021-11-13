@@ -48,34 +48,42 @@
     }
 
     #navigation-upper-left {
+
+        /* border: 2px solid red; */
         width: 100%;
         display: flex;
-        margin-right: 7px;
+        /* margin-right: 7px; */
     }
 
     #navigation-upper-right {
+        /* border: 2px solid red; */
+
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
-        margin-left: 7px;
+        /* margin-left: 7px; */
     }
 
     .logo {
         color: rgb(7, 7, 156);
-        padding-left: 22px;
+        /* padding-left: 22px; */
+        /* padding-right: 12px; */
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-        width: 20%;
+        width: 30%;
+        /* border: 2px solid red; */
     }
 
     #menu-bar-1 {
+        /* border: 2px solid red; */
+
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 80%;
+        width: 70%;
     }
 
     #menu-bar-2 {
@@ -90,19 +98,22 @@
     }
 
     .tools {
-        margin-left: 15%;
-        width: 50%;
+
+        /* margin-left: 15%; */
+        width: 55%;
         height: 100%;
         display: flex;
         /* border: 2px solid red; */
     }
 
     .tools div a {
+
         color: black;
         text-decoration: none;
     }
 
     .button-section {
+
         width: 100%;
         height: 100%;
         display: flex;
@@ -148,6 +159,7 @@
 
     .website {
         width: 100%;
+        height: 50%;
         font-size: 10px;
         display: flex;
         justify-content: center;
@@ -159,9 +171,11 @@
     }
 
     .paid-course {
+
         /* border: 2px solid black; */
         padding: 4%;
         width: 100%;
+        height: 30%;
         font-size: 10px;
         display: flex;
         justify-content: center;
@@ -173,10 +187,11 @@
     }
 
     .log-in {
+
         margin: 12% 10px 12% 10px;
         padding: 4%;
         /* border: 2px solid black; */
-        height: 35%;
+        height: 30%;
         width: 100%;
         font-size: 10px;
         display: flex;
@@ -214,14 +229,17 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        /* border: 2px solid red; */
     }
 
     .home-upper-right-section {
         background-color: white;
+        /* border: 2px solid rgb(6, 6, 250); */
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        height: 80%;
         width: 80%;
         margin: 12px;
         border-radius: 12px;
@@ -230,16 +248,36 @@
     }
 
     .home-upper-right-section label {
+        /* border: 2px solid yellow; */
         color: grey;
+        font-size: 12px;
+        margin: 0;
     }
 
     .home-upper-right-section h1 {
-        font-size: 30px;
+        /* border: 2px solid green; */
+        font-size: 25px;
+    }
+
+    .home-upper-right-section div {
+        /* border: 2px solid violet; */
+
+    }
+
+    .home-upper-right-section div a {
+        border: 2px solid grey;
+        font-size: 10px;
+        text-decoration: none;
+        border-radius: 4px;
+        padding: 1px;
+
     }
 
     .home-upper-right-section button {
+        border: 2px solid violet;
         border-radius: 10px;
-        width: 30%;
+        width: 40%;
+        font-size: 8px;
         margin-top: 10px;
         border: none;
         color: white;
@@ -405,6 +443,13 @@
         color: white;
     }
 
+    @media only screen and (max-width:630px) {
+        .tools {
+            display: none;
+
+        }
+    }
+
     @media only screen and (max-width:500px) {
 
         /* The whole navigation dashboard will comes under this section */
@@ -439,7 +484,18 @@
             align-items: center;
         }
 
+        .logo {
+            /* border: 2px solid green; */
+            width: 50%;
+        }
+
+        .button-section {
+            /* padding-right: 0px; */
+            /* border: 2px solid green; */
+        }
+
         .website {
+
             display: none;
         }
 
@@ -453,6 +509,12 @@
 
         .translate {
             display: none;
+        }
+
+        .log-in {
+            /* border: 2px solid red; */
+            margin-right: 0px;
+            width: 55%;
         }
 
 
@@ -484,6 +546,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            /* border: 2px solid red; */
         }
 
         .home-upper-right-section {
